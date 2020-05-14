@@ -76,7 +76,10 @@ class App extends React.Component {
             <h3 >about</h3>
             <div className="border-line"></div>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, maxime aliquam ex harum impedit voluptatibus natus, repudiandae numquam, ab laborum nemo recusandae delectus perspiciatis dolores eos! Mollitia quis dolore beatae! Ducimus possimus molestias ratione voluptatibus non? Ipsam qui modi aliquid?</p>
+          <h4>Hi, I'm Marius Zerni</h4>
+          <p>I was always curious about computers and programming and as I started studying web technologies on my own, I grew more passionate and determined to improve my knowledge about web development. I’m curious and open to learning new things. <br />
+I’m now looking to progress as a Junior Web Developer to enhance my current skills and also develop new ones based on the industry expectations.
+          </p>
           <div className="skills-education-container">
 
             <div onClick={this.toggleModalSkills.bind(this)} className="skills" 
@@ -108,8 +111,25 @@ class App extends React.Component {
                 size="lg"
                 // aria-labelledby="contained-modal-title-vcenter"
                 centered>
-                <ModalHeader toggle={this.toggleModalEducation.bind(this)}>Education</ModalHeader>
-                <ModalBody>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sint fugiat odit aperiam, nam libero assumenda necessitatibus error incidunt fugit?</ModalBody> 
+                <ModalHeader toggle={this.toggleModalEducation.bind(this)}><h2> Education</h2></ModalHeader>
+                <ModalBody>
+                  <section className="education">
+                    <div className="education-section">
+                      <i className="fas fa-angle-double-right fa-2x"></i>
+                      <h4>General Assembly - Software Engineering Immersive, Jan - April 2020</h4>
+                    </div>
+                    <div className="education-section">
+                      <i className="fas fa-angle-double-right fa-2x"></i>
+                      <h4> Codecademy - JavaScript, HTML, CSS, October - Jan 2019</h4>
+                    </div>
+                    <div className="education-section">
+                      <i className="fas fa-angle-double-right fa-2x"></i>
+                      <h4> Bachelor Degree in Geography and Tourism - Babes Bolyai University, Cluj-Napoca, Romania - 2009 - 2012</h4>
+                    </div>
+                    
+                    
+                  </section>
+                </ModalBody> 
               </Modal>
             </div>
           </div>
@@ -125,11 +145,15 @@ class App extends React.Component {
           <div className="experience-section">
             <div className="experience-content">
               <h4>Abstract Photography</h4>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, optio iste ipsum at asperiores perspiciatis deserunt officiis dignissimos eos! Asperiores!</p>
+              <h4>2017 - 2020</h4>
+              {/* <h5>Manager and photographer</h5> */}
+              <p>Abstract Photography is a company based in Romania that I created with my business partner in 2017. Working as a photographer and also managing this company helped me develop my leadership skills, getting experience in managing people, communicating with clients and delivering contracts under pressure.  </p>
             </div>
             <div className="experience-content">
               <h4>General Assembly</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi doloribus ipsam consectetur quaerat adipisci consequuntur exercitationem explicabo repudiandae sit impedit.</p>
+              <h4>Feb 2020 - April 2020</h4>
+              <p>Attending this course allowed me to develop my software engineering and communication skills by working in teams and developing projects using different web technologies and frameworks such as React, Express or Django. <br/>
+              For more details, see my projects section and my github page.</p>
             </div>
           </div>
         </div>
@@ -144,32 +168,32 @@ class App extends React.Component {
             <div className="project-card" style={{ backgroundImage: `url(${unlock})` }}>
               <figure className="effect-marley">
                 <div className="overlay">
-                  <h4 id="h2"><a href="#"> Unlock</a></h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laboriosam.</p>
+                  <h4 id="h2"><a href="//unlockself.herokuapp.com" target="_blanck"> Unlock</a></h4>
+                  <p>A platform where where people can share their stories of changing their career paths, allowing other people to get inspiration from this. </p>
                 </div>
               </figure>
             </div>
             <div className="project-card" style={{ backgroundImage: `url(${esportcentral})` }}>
               <figure className="effect-marley">
                 <div className="overlay">
-                  <h4 id="h2"><a href="#"> EsportCentral</a></h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laboriosam.</p>
+                  <h4 id="h2"><a href="//esportcentral.herokuapp.com" target="_blanck"> EsportCentral</a></h4>
+                  <p>Created to support the gaming community in finding the latest games, watching live games via the Twitch platform and also checking the teams that are currently playing.</p>
                 </div>
               </figure>
             </div>
             <div className="project-card" style={{ backgroundImage: `url(${movify})` }}>
               <figure className="effect-marley">
                 <div className="overlay">
-                  <h4 id="h2"><a href="#"> Movify</a></h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laboriosam.</p>
+                  <h4 id="h2"><a href="//mariuszerni.github.io/project-2" target="_blanck"> Movify</a></h4>
+                  <p>An app that could help people find more easily the movies they are interested in.</p>
                 </div>
               </figure>
             </div>
             <div className="project-card" style={{ backgroundImage: `url(${movingtomars})` }}>
               <figure className="effect-marley">
                 <div className="overlay">
-                  <h4 id="h2"><a href="#"> MovingToMars</a></h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laboriosam.</p>
+                  <h4 id="h2"><a href="//mariuszerni.github.io/project-1" target="_blanck"> MovingToMars</a></h4>
+                  <p> It is a game created using plain JavaScript, HTML and CSS.</p>
                 </div>
               </figure>
             </div>
