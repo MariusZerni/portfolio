@@ -12,6 +12,7 @@ import unlock from './images/unlock.png'
 import esportcentral from './images/esportcentral.png'
 import movify from './images/movify.png'
 import movingtomars from './images/movingtomars.png'
+import logo from './images/logo.png'
 
 import './styles/style.scss'
 
@@ -33,9 +34,10 @@ class App extends React.Component {
       const isTop = window.scrollY < 100
       if (isTop !== true) {
         this.setState({ scrolled: true })
+        this.setState({ linkColor: true })
       } else {
         this.setState({ scrolled: false })
-      }
+      } 
     })
   }
 
@@ -64,6 +66,7 @@ class App extends React.Component {
             </ul>
           </div>
           <div className="description">
+            <div className="logo" style={{ backgroundImage: `url(${logo})` }}></div>
             <h2>junior software engineer</h2>
             <div className="border-line"></div>
             {/* <h4>looking for new opportunities</h4> */}
@@ -76,10 +79,15 @@ class App extends React.Component {
             <h3 >about</h3>
             <div className="border-line"></div>
           </div>
-          <h4>Hi, I'm Marius Zerni</h4>
+          <h4>Hi, I&apos;m Marius Zerni</h4>
           <p>I was always curious about computers and programming and as I started studying web technologies on my own, I grew more passionate and determined to improve my knowledge about web development. I’m curious and open to learning new things. <br />
 I’m now looking to progress as a Junior Web Developer to enhance my current skills and also develop new ones based on the industry expectations.
           </p>
+          <h5>When I&apos;m not coding </h5>
+          <p> I practice winter sports. I started to snowboard from a young age, being on the slopes makes me feel free and energised. For the past few years, I have discovered the French and Austrian Alps resorts to be amazing places for enjoying mountains sports.</p>
+          <h5>One of the ideas I explored recently</h5>
+          <p className="advice"><em>Fail fast and be precise about it.</em></p>
+          <p>It looks like a paradox, but it actually makes sense. If you fail fast you will have the time and the knowledge to correct yourself and try a new way. So, rather than waiting to take a decision and postponing action to avoid making a mistake, it is wiser to act after weighing the consequences, so that you can learn from your current failed attempt and try again with a more informed decision.</p>
           <div className="skills-education-container">
 
             <div onClick={this.toggleModalSkills.bind(this)} className="skills" 
@@ -91,22 +99,53 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
                 <ModalHeader toggle={this.toggleModalSkills.bind(this)}><h2>Skills</h2> </ModalHeader>
                 <ModalBody>
                   <section className="icons-section">
-                    <i className="fab fa-react fa-5x"></i>
-                    <i className="fab fa-js fa-5x"></i>
-                    <i className="fab fa-html5 fa-5x"></i>
-                    <i className="fab fa-css3 fa-5x"></i>
-                    <i className="fab fa-node fa-5x"></i>
-                    <i className="fab fa-python fa-5x"></i>
-                    <i className="fab fa-git fa-5x"></i>
-                    <i className="fab fa-github fa-5x"></i>
-                    <i className="fab fa-sass fa-5x"></i>
-                    <i className="fab fa-bootstrap fa-5x"></i>
+                    <div className="skill-icon">
+                      <i className="fab fa-react fa-5x"></i>
+                      <h5>React</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-js fa-5x"></i>
+                      <h5>JavaScript</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-html5 fa-5x"></i>
+                      <h5>HTML</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-css3 fa-5x"></i>
+                      <h5>CSS3</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-node fa-5x"></i>
+                      <h5>Node.js</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-python fa-5x"></i>
+                      <h5>Python</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-git fa-5x"></i>
+                      <h5>Git</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-github fa-5x"></i>
+                      <h5>Github</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-sass fa-5x"></i>
+                      <h5>SASS</h5>
+                    </div>
+                    <div className="skill-icon">
+                      <i className="fab fa-bootstrap fa-5x"></i>
+                      <h5>Bootstrap</h5>
+                    </div>
                   </section>
                 </ModalBody> 
               </Modal>
             </div>
 
             <div onClick={this.toggleModalEducation.bind(this)} className="education" style={{ backgroundImage: `url(${education})` }}> 
+            
               <Modal isOpen={this.state.modalEducationIsOpen}
                 size="lg"
                 // aria-labelledby="contained-modal-title-vcenter"
@@ -131,7 +170,9 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
                   </section>
                 </ModalBody> 
               </Modal>
+              {/* <h5>Education</h5> */}
             </div>
+            
           </div>
         </div>
       </div>
