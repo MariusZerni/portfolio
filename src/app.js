@@ -89,90 +89,96 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
           <p className="advice"><em>Fail fast and be precise about it.</em></p>
           <p>It looks like a paradox, but it actually makes sense. If you fail fast you will have the time and the knowledge to correct yourself and try a new way. So, rather than waiting to take a decision and postponing action to avoid making a mistake, it is wiser to act after weighing the consequences, so that you can learn from your current failed attempt and try again with a more informed decision.</p>
           <div className="skills-education-container">
-
-            <div onClick={this.toggleModalSkills.bind(this)} className="skills" 
-              style={{ backgroundImage: `url(${skills})` }}>
-              <Modal isOpen={this.state.modalSkillsIsOpen}
-                size="lg"
-                // aria-labelledby="contained-modal-title-vcenter"
-                centered>
-                <ModalHeader toggle={this.toggleModalSkills.bind(this)}><h2>Skills</h2> </ModalHeader>
-                <ModalBody>
-                  <section className="icons-section">
-                    <div className="skill-icon">
-                      <i className="fab fa-react fa-5x"></i>
-                      <h5>React</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-js fa-5x"></i>
-                      <h5>JavaScript</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-html5 fa-5x"></i>
-                      <h5>HTML</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-css3 fa-5x"></i>
-                      <h5>CSS3</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-node fa-5x"></i>
-                      <h5>Node.js</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-python fa-5x"></i>
-                      <h5>Python</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-git fa-5x"></i>
-                      <h5>Git</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-github fa-5x"></i>
-                      <h5>Github</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-sass fa-5x"></i>
-                      <h5>SASS</h5>
-                    </div>
-                    <div className="skill-icon">
-                      <i className="fab fa-bootstrap fa-5x"></i>
-                      <h5>Bootstrap</h5>
-                    </div>
-                  </section>
-                </ModalBody> 
-              </Modal>
+            <div className="skills-education-section">
+              <h4>Skills</h4>
+              <div onClick={this.toggleModalSkills.bind(this)} className="skills" 
+                style={{ backgroundImage: `url(${skills})` }}>
+                
+                <Modal isOpen={this.state.modalSkillsIsOpen}
+                  size="lg"
+                  // aria-labelledby="contained-modal-title-vcenter"
+                  centered>
+                  <ModalHeader toggle={this.toggleModalSkills.bind(this)}><h2>Skills</h2> </ModalHeader>
+                  <ModalBody>
+                    <section className="icons-section">
+                      <div className="skill-icon">
+                        <i className="fab fa-react fa-5x"></i>
+                        <h5>React</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-js fa-5x"></i>
+                        <h5>JavaScript</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-html5 fa-5x"></i>
+                        <h5>HTML</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-css3 fa-5x"></i>
+                        <h5>CSS3</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-node fa-5x"></i>
+                        <h5>Node.js</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-python fa-5x"></i>
+                        <h5>Python</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-git fa-5x"></i>
+                        <h5>Git</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-github fa-5x"></i>
+                        <h5>Github</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-sass fa-5x"></i>
+                        <h5>SASS</h5>
+                      </div>
+                      <div className="skill-icon">
+                        <i className="fab fa-bootstrap fa-5x"></i>
+                        <h5>Bootstrap</h5>
+                      </div>
+                    </section>
+                  </ModalBody> 
+                </Modal>
+              </div>
             </div>
-
-            <div onClick={this.toggleModalEducation.bind(this)} className="education" style={{ backgroundImage: `url(${education})` }}> 
-            
-              <Modal isOpen={this.state.modalEducationIsOpen}
-                size="lg"
-                // aria-labelledby="contained-modal-title-vcenter"
-                centered>
-                <ModalHeader toggle={this.toggleModalEducation.bind(this)}><h2> Education</h2></ModalHeader>
-                <ModalBody>
-                  <section className="education">
-                    <div className="education-section">
-                      <i className="fas fa-angle-double-right fa-2x"></i>
-                      <h4>General Assembly - Software Engineering Immersive, Jan - April 2020</h4>
-                    </div>
-                    <div className="education-section">
-                      <i className="fas fa-angle-double-right fa-2x"></i>
-                      <h4> Codecademy - JavaScript, HTML, CSS, October - Jan 2019</h4>
-                    </div>
-                    <div className="education-section">
-                      <i className="fas fa-angle-double-right fa-2x"></i>
-                      <h4> Bachelor Degree in Geography and Tourism - Babes Bolyai University, Cluj-Napoca, Romania - 2009 - 2012</h4>
-                    </div>
-                    
-                    
-                  </section>
-                </ModalBody> 
-              </Modal>
-              {/* <h5>Education</h5> */}
+            <div className="skills-education-section">
+              <h4>Education</h4>
+              <div onClick={this.toggleModalEducation.bind(this)} className="education" style={{ backgroundImage: `url(${education})` }}> 
+              
+                <Modal isOpen={this.state.modalEducationIsOpen}
+                  size="lg"
+                  // aria-labelledby="contained-modal-title-vcenter"
+                  centered>
+                  <ModalHeader toggle={this.toggleModalEducation.bind(this)}>
+                    <h2> Education</h2>
+                  </ModalHeader>
+                  <ModalBody>
+                    <section className="education">
+                      <div className="education-section">
+                        <i className="fas fa-angle-double-right fa-2x"></i>
+                        <h4>General Assembly - Software Engineering Immersive, Jan - April 2020</h4>
+                      </div>
+                      <div className="education-section">
+                        <i className="fas fa-angle-double-right fa-2x"></i>
+                        <h4> Codecademy - JavaScript, HTML, CSS, October - Jan 2019</h4>
+                      </div>
+                      <div className="education-section">
+                        <i className="fas fa-angle-double-right fa-2x"></i>
+                        <h4> Bachelor Degree in Geography and Tourism - Babes Bolyai University, Cluj-Napoca, Romania - 2009 - 2012</h4>
+                      </div>
+                      
+                      
+                    </section>
+                  </ModalBody> 
+                </Modal>
+                
+              </div>
             </div>
-            
           </div>
         </div>
       </div>
@@ -187,7 +193,6 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
             <div className="experience-content">
               <h4>Abstract Photography</h4>
               <h4>2017 - 2020</h4>
-              {/* <h5>Manager and photographer</h5> */}
               <p>Abstract Photography is a company based in Romania that I created with my business partner in 2017. Working as a photographer and also managing this company helped me develop my leadership skills, getting experience in managing people, communicating with clients and delivering contracts under pressure.  </p>
             </div>
             <div className="experience-content">
@@ -225,7 +230,7 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
             <div className="project-card" style={{ backgroundImage: `url(${movify})` }}>
               <figure className="effect-marley">
                 <div className="overlay">
-                  <h4 id="h2"><a href="//mariuszerni.github.io/project-2" target="_blanck"> Movify</a></h4>
+                  <h4 id="h2"><a href="//mariuszerni.github.io/movify" target="_blanck"> Movify</a></h4>
                   <p>An app that could help people find more easily the movies they are interested in.</p>
                 </div>
               </figure>
@@ -233,7 +238,7 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
             <div className="project-card" style={{ backgroundImage: `url(${movingtomars})` }}>
               <figure className="effect-marley">
                 <div className="overlay">
-                  <h4 id="h2"><a href="//mariuszerni.github.io/project-1" target="_blanck"> MovingToMars</a></h4>
+                  <h4 id="h2"><a href="//mariuszerni.github.io/moving-to-mars" target="_blanck"> MovingToMars</a></h4>
                   <p> It is a game created using plain JavaScript, HTML and CSS.</p>
                 </div>
               </figure>

@@ -4,9 +4,6 @@ html {
   scroll-behavior: smooth;
 }
 
-// span {
-//   color: greenyellow;
-// }
 
 .education-section {
   display: flex;
@@ -87,7 +84,6 @@ h2 {
 .overlay:hover {
   transition: background-color 0.5s ease-in-out;
   background-color: rgba(12, 12, 12, 0.815);
-  // width: 400px;
   height: 200px;
 }
 
@@ -95,7 +91,6 @@ h2 {
   color: yellow;
   text-decoration: none;
 }
-
 
 .effect-marley p {
   font-size: 14px;
@@ -137,7 +132,6 @@ a {
   top: 100%;
   left: -20px;
   right: 20px;
-  // width: 35%;
   height: 3px;
   background: yellow;
   content: '';
@@ -151,7 +145,6 @@ p {
 
 .effect-marley #h2::after,
 .effect-marley p {
-  // margin-top: 10px;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -164,15 +157,11 @@ p {
   transform: translate3d(0,0,0);
 }
 
-
-
-
 h3 {
   text-align: center;
   font-size: 2.8em;
   font-weight: 400;
 }
-
 
 .main-container {
   
@@ -187,9 +176,7 @@ h3 {
       width: 100%;
       height: 100%;
       background-color: rgba(255, 255, 255, .7);
-      // background-color: rgba(0, 0, 0, .8 );
-      // background: linear-gradient(to right, rgba(255, 255, 255, .9)40%, rgba(255, 255, 255, .1));
-
+  
       .container-navbar {
         position: fixed;
         z-index: 1;
@@ -202,19 +189,13 @@ h3 {
           margin: 0;
           display: flex;
           align-content: center;
-          // background-color: blue;
-          
-
+   
           li {
-            // color: black;
             padding: 10px;
             list-style: none;
             margin-top: 10px;
             position: relative;
-            
-            
-
-            
+  
             &:first-child::after {
               content: "";
                 position: absolute;
@@ -235,7 +216,6 @@ h3 {
               color: black;
               font-size: 1.3rem;
 
-
               &::after {
                 content: "";
                 position: absolute;
@@ -244,12 +224,10 @@ h3 {
                 width: 100%;
                 height: 3px;
                 background-color: yellow;
-
                 transform-origin: right;
                 transform: scale(0);
                 transition: transform 300ms ease-in;
               }
-
 
               &:hover::after {
                 transform: scale(1);
@@ -265,13 +243,9 @@ h3 {
         display: flex;
         align-items: center;
         line-height: 60px;
-        // justify-content: center;
         flex-direction: column;
-        // text-align: center;
         margin-top: 250px;;
-        // padding: 200px 0 0 200px;
         width: 60vw;
-        // height: 70vh;
 
         .logo {
           width: 80px;
@@ -281,7 +255,6 @@ h3 {
 
         h2 {
           color: black;
-          // width: 50%;
           font-size: 2.5em;
           font-weight: 400;
         }
@@ -292,7 +265,6 @@ h3 {
           height: 3px;
           background-color: yellow;
         }
-
       }
     }
   }
@@ -300,7 +272,6 @@ h3 {
   .about-container {
     display: flex;
     justify-content: center;
-    // height: 70vh;
     margin-top: 60px;
 
     .personal-bio h4 {
@@ -318,7 +289,6 @@ h3 {
       align-items: center;
 
       h5 {
-        // font-weight: 900;
         font-size: 1.4em;
         margin: 25px 0 5px 0;
         align-self: flex-start;
@@ -331,16 +301,11 @@ h3 {
         font-weight: 500;
       }
       
-
       .about {
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;    
         align-self: flex-start;
         
-
-       
-
         h3 {
           text-align: center;
         }
@@ -366,26 +331,37 @@ h3 {
         align-items: center;
         justify-content: space-around;
 
+        .skills-education-section { 
+          width: 200px;
+          margin: 0 auto;
+
+          h4 {
+            text-align: center;
+          }
+        }
 
         .skills, .education {
-          
+         margin: 0 auto;
           background-position: center;
           background-repeat: no-repeat;
-          padding: 26px;
-          width: 94px;
-          height: 94px;
+          width: 100px;
+          height: 100px;
           cursor: pointer;
+
+         h4 {
+           display: inline-block;
+           margin-top: 70px;
+           text-align: center;
+           color: blue;
+         }
 
           &:hover {
             transition: background-color 0.6s ease-in-out;
             border-radius: 10px;
             border: 1.5px solid black;
-            // padding: 20px;
             background-color: yellow;
           }
         }
-        
-
       }
     }
   
@@ -394,7 +370,6 @@ h3 {
   .experience-container {
     width: 100vw;
     height: 80vh;
-    // background-image: contain;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -408,11 +383,9 @@ h3 {
         padding-top: 60px;
         display: flex;
         flex-direction: column;        
-        // align-self: flex-start;
         width: 280px;
       
-
-        h3 {
+      h3 {
           text-align: center;
           color: white;
         }
@@ -425,6 +398,7 @@ h3 {
           background-color: yellow;
         }
       }  
+
       .experience-section {
         margin: 0 auto;
         margin-top: 30px;
@@ -434,10 +408,8 @@ h3 {
 
         .experience-content {
           width: 35%;
-          // background-color: yellow;
 
           h4 {
-            // display: inline;
             color: white;
           }
 
@@ -445,15 +417,13 @@ h3 {
             color: white;
           }
         }
-      }
-       
+      }      
     }
   }
 
   .projects-container {
     padding-bottom: 70px;
     width: 100vw;
-    // height: 90vh;
     background-color: rgba(240, 238, 235, 0.226);
 
     .projects-inner-container {
@@ -466,7 +436,6 @@ h3 {
         padding-top: 60px;
         display: flex;
         flex-direction: column;        
-        // align-self: flex-start;
         width: 200px;
 
         h3 {
@@ -475,7 +444,6 @@ h3 {
 
         .border-line {
           margin: 10px 0;
-          // align-self: flex-start;
           height: 3px;
           width: 100%;
           background-color: yellow;
@@ -489,24 +457,19 @@ h3 {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        // background-color: rgba(73, 69, 69, 0.1);
         
         .project-card {
-          // background-color: #fff;
-          // border-radius: 10px;
             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
               0 10px 10px rgba(0,0,0,0.22);
           margin: 20px;
           width: 400px;
           height: 200px;
-          // background-color: yellowgreen;
         }
       }
     }
   }
 
   .contact-container {
-    // display: flex;
     width: 100vw;
     height: 80vh;
 
@@ -518,13 +481,10 @@ h3 {
 
       h3 {
         text-align: center;
-        // padding: 40px 0;
-        
       }
 
       .border-line {
         margin: 15px 0;
-        // align-self: flex-start;
         height: 3px;
         width: 100%;
         background-color: yellow;
@@ -532,19 +492,14 @@ h3 {
     }
 
     .contact-section {
-      // margin-top: 30px;
       display: flex;
       margin-left: 20%;
-      // line-height: 32px;
 
       a {
         display: flex;
-        // line-height: 72px;
         text-decoration: none;
         color: black;
-        
-      
-      
+            
         h4 {
           position: relative;
           margin-left: 10px;
@@ -566,7 +521,6 @@ h3 {
             transition: transform 500ms ease-in;
           }
 
-
           &:hover::after {
             transform: scale(1);
             transform-origin: left;
@@ -582,7 +536,6 @@ h3 {
     background-color: rgba(240, 238, 235, 0.226);
     text-align: center;
     line-height: 15vh;
-    // border-top: 1px solid grey;
 
     .border-line {
       margin: 0 auto;
@@ -601,24 +554,14 @@ h3 {
 }
 .personal-bio {
   padding-left: 10px;
-  // background-color: indianred;
   width: 100vw;
 }
 
   .main-container {
-    
-    // width: 100vw;
-    // padding: 0;
-    // margin: 0;
 
     ul {
-      width: 100vw;
-      background-color: hotpink;
-      
 
       li {
-        // padding: 5px;
-      
 
         a {
           font-size: 8px;
@@ -626,7 +569,4 @@ h3 {
       }  
     }
   }
-  
-
-
 }
