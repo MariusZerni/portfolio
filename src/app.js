@@ -3,7 +3,6 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap'
 import './styles/style.scss'
-// import { Link } from 'react-router-dom'
 import backgroundImage from './images/image.jpg'
 import backgroundImage2 from './images/backgroundimage2.jpg'
 import skills from './images/skills.png'
@@ -13,6 +12,7 @@ import esportcentral from './images/esportcentral.png'
 import movify from './images/movify.png'
 import movingtomars from './images/movingtomars.png'
 import logo from './images/logo.png'
+import justImobiliare from './images/just-imobiliare.png'
 
 import './styles/style.scss'
 
@@ -23,10 +23,9 @@ class App extends React.Component {
     this.state = {
       modalSkillsIsOpen: false,
       modalEducationIsOpen: false,
-      scrolled: false
+      scrolled: false,
+      selectedMenu: 'home'
     }
-
-    console.log('App')
   }
 
   componentDidMount() {
@@ -34,10 +33,9 @@ class App extends React.Component {
       const isTop = window.scrollY < 100
       if (isTop !== true) {
         this.setState({ scrolled: true })
-        this.setState({ linkColor: true })
       } else {
         this.setState({ scrolled: false })
-      } 
+      }
     })
   }
 
@@ -49,27 +47,43 @@ class App extends React.Component {
     this.setState({ modalEducationIsOpen: !this.state.modalEducationIsOpen })
   }
 
-
   render() {
-    console.log('render')
     return <div className="main-container">
       <div className="img-background" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      
         <div id="home" className="overlay">
           <div className={this.state.scrolled ? 'container-navbar scrolled' : 'container-navbar'}>
             <ul>
-              <li><a href="#home">home</a></li>
-              <li><a href="#about">about</a></li>
-              <li><a href="#experience">experience</a></li>
-              <li><a href="#projects">projects</a></li>
-              <li><a href="#contact">contact</a></li>
+              <li>
+                <div className={this.state.selectedMenu === 'home' ? 'underline' : null}
+                  onClick={() => this.setState({ selectedMenu: 'home' })} ><a href="#home">home</a>
+                </div>
+              </li>
+              <li>
+                <div className={this.state.selectedMenu === 'about' ? 'underline' : null}
+                  onClick={() => this.setState({ selectedMenu: 'about' })} ><a href="#about">about</a>
+                </div>
+              </li>
+              <li>
+                <div className={this.state.selectedMenu === 'experience' ? 'underline' : null}
+                  onClick={() => this.setState({ selectedMenu: 'experience' })} ><a href="#experience">experience</a>
+                </div>
+              </li>
+              <li>
+                <div className={this.state.selectedMenu === 'projects' ? 'underline' : null}
+                  onClick={() => this.setState({ selectedMenu: 'projects' })} ><a href="#projects">projects</a>
+                </div>
+              </li>
+              <li>
+                <div className={this.state.selectedMenu === 'contact' ? 'underline' : null}
+                  onClick={() => this.setState({ selectedMenu: 'contact' })} ><a href="#contact">contact</a>
+                </div>
+              </li>
             </ul>
           </div>
           <div className="description">
             <div className="logo" style={{ backgroundImage: `url(${logo})` }}></div>
             <h2>junior software engineer</h2>
             <div className="border-line"></div>
-            {/* <h4>looking for new opportunities</h4> */}
           </div>
         </div>
       </div>
@@ -81,7 +95,7 @@ class App extends React.Component {
           </div>
           <h4>Hi, I&apos;m Marius Zerni</h4>
           <p>I was always curious about computers and programming and as I started studying web technologies on my own, I grew more passionate and determined to improve my knowledge about web development. I’m curious and open to learning new things. <br />
-I’m now looking to progress as a Junior Web Developer to enhance my current skills and also develop new ones based on the industry expectations.
+            I’m now looking to progress as a Junior Web Developer to enhance my current skills and also develop new ones based on the industry expectations.
           </p>
           <h5>When I&apos;m not coding </h5>
           <p> I practice winter sports. I started to snowboard from a young age, being on the slopes makes me feel free and energised. For the past few years, I have discovered the French and Austrian Alps resorts to be amazing places for enjoying mountains sports.</p>
@@ -91,12 +105,10 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
           <div className="skills-education-container">
             <div className="skills-education-section">
               <h4>Skills</h4>
-              <div onClick={this.toggleModalSkills.bind(this)} className="skills" 
+              <div onClick={this.toggleModalSkills.bind(this)} className="skills"
                 style={{ backgroundImage: `url(${skills})` }}>
-                
                 <Modal isOpen={this.state.modalSkillsIsOpen}
                   size="lg"
-                  // aria-labelledby="contained-modal-title-vcenter"
                   centered>
                   <ModalHeader toggle={this.toggleModalSkills.bind(this)}><h2>Skills</h2> </ModalHeader>
                   <ModalBody>
@@ -142,17 +154,15 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
                         <h5>Bootstrap</h5>
                       </div>
                     </section>
-                  </ModalBody> 
+                  </ModalBody>
                 </Modal>
               </div>
             </div>
             <div className="skills-education-section">
               <h4>Education</h4>
-              <div onClick={this.toggleModalEducation.bind(this)} className="education" style={{ backgroundImage: `url(${education})` }}> 
-              
+              <div onClick={this.toggleModalEducation.bind(this)} className="education" style={{ backgroundImage: `url(${education})` }}>
                 <Modal isOpen={this.state.modalEducationIsOpen}
                   size="lg"
-                  // aria-labelledby="contained-modal-title-vcenter"
                   centered>
                   <ModalHeader toggle={this.toggleModalEducation.bind(this)}>
                     <h2> Education</h2>
@@ -169,14 +179,11 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
                       </div>
                       <div className="education-section">
                         <i className="fas fa-angle-double-right fa-2x"></i>
-                        <h4> Bachelor Degree in Geography and Tourism - Babes Bolyai University, Cluj-Napoca, Romania - 2009 - 2012</h4>
+                        <h4> Bachelor Degree in Geography of Tourism - Babes Bolyai University, Cluj-Napoca, Romania - 2009 - 2012</h4>
                       </div>
-                      
-                      
                     </section>
-                  </ModalBody> 
+                  </ModalBody>
                 </Modal>
-                
               </div>
             </div>
           </div>
@@ -187,19 +194,38 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
           <div className="experience-title">
             <h3>experience</h3>
             <div className="border-line"></div>
-          
           </div>
           <div className="experience-section">
             <div className="experience-content">
-              <h4>Abstract Photography</h4>
-              <h4>2017 - 2020</h4>
-              <p>Abstract Photography is a company based in Romania that I created with my business partner in 2017. Working as a photographer and also managing this company helped me develop my leadership skills, getting experience in managing people, communicating with clients and delivering contracts under pressure.  </p>
+              <i className="fas fa-angle-double-right fa-2x"></i>
+              <h4>Crescent Soft, Freelancer - Remote Junior Front End Developer</h4>
+              <h4>APR 2020 - present</h4>
+              <p>I am currently working on a CRM project for an Estate Agency which allows the agents to authenticate, create accounts, manage property types and client information. I am using the following technologies: - on the back end: MongoDB, Mongoose, Node.js /Express.js; - on the front end: React / React Hooks, Javascript, SCSS, Axios</p>
+              {/* <p>Abstract Photography is a company based in Romania that I created with my business partner in 2017. Working as a photographer and also managing this company helped me develop my leadership skills, getting experience in managing people, communicating with clients and delivering contracts under pressure.  </p> */}
             </div>
             <div className="experience-content">
-              <h4>General Assembly</h4>
-              <h4>Feb 2020 - April 2020</h4>
-              <p>Attending this course allowed me to develop my software engineering and communication skills by working in teams and developing projects using different web technologies and frameworks such as React, Express or Django. <br/>
-              For more details, see my projects section and my github page.</p>
+              <i className="fas fa-angle-double-right fa-2x"></i>
+              <h4>Software Engineering Immersive Bootcamp, General Assembly, London</h4>
+              <h4>JAN 2020 - APR 2020</h4>
+              <p>Attending this intensive bootcamp allowed me to develop my software engineering and communication skills by working on projects using different web technologies and frameworks such as React, Express or Django.</p>
+            </div>
+            <div className="experience-content">
+              <i className="fas fa-angle-double-right fa-2x"></i>
+              <h4>Crescent Soft, Freelancer - Remote Junior Front End Developer</h4>
+              <h4>SEP 2019 - JAN 2020</h4>
+              <p>Responsabilities: Worked on creating and improving website templates, using HTML, CSS, Photoshop. Liasing with clients, fixing template or design issues.</p>
+            </div>
+            <div className="experience-content">
+              <i className="fas fa-angle-double-right fa-2x"></i>
+              <h4>Crescent Soft, Website administrator, Romania</h4>
+              <h4>JAN 2019 - MAR 2019</h4>
+              <p>Managing website content and administration.</p>
+            </div>
+            <div className="experience-content">
+              <i className="fas fa-angle-double-right fa-2x"></i>
+              <h4>Manager and photographer at Abstract Photography, Romania</h4>
+              <h4>2017 - JAN 2020</h4>
+              <p>Abstract photography is a company based in Romania that I started with my business partner in 2017. Working as a photographer and also managing this company helped me develop my leadership skills, getting experience in managing people, communicating with clients and delivering contracts under pressure.</p>
             </div>
           </div>
         </div>
@@ -211,6 +237,14 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
             <div className="border-line"></div>
           </div>
           <div className="projects-section">
+            <div className="project-card" style={{ backgroundImage: `url(${justImobiliare})` }}>
+              <figure className="effect-marley">
+                <div className="overlay">
+                  <h4 id="h2"><a target="_blanck"> Just Imobiliare</a></h4>
+                  <p>A CRM project developed for an estate agency which allows the agents to authenticate, create accounts, manage property types and client information. </p>
+                </div>
+              </figure>
+            </div>
             <div className="project-card" style={{ backgroundImage: `url(${unlock})` }}>
               <figure className="effect-marley">
                 <div className="overlay">
@@ -243,7 +277,6 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
                 </div>
               </figure>
             </div>
-         
           </div>
         </div>
       </div>
@@ -252,7 +285,6 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
           <h3>contact</h3>
           <div className="border-line"></div>
         </div>
-        
         <div className="contact-section">
           <a href="//linkedin.com/in/marius-zerni" target="_blank" rel="noopener noreferrer"> <i className="fab fa-linkedin fa-2x "></i>
             <h4>linkedin.com/in/marius-zerni</h4>
@@ -265,21 +297,16 @@ I’m now looking to progress as a Junior Web Developer to enhance my current sk
         </div>
         <div className="contact-section">
           <a> <i className="far fa-envelope fa-2x "></i>
-            <h4>marius_zerni@yahoo.com</h4>
+            <h4>mariuszerni90@gmail.com</h4>
           </a>
         </div>
-        
-
       </div>
-
       <footer>
         <div className="border-line"></div>
         <p>&copy; 2020 Marius Zerni</p>
       </footer>
-
     </div>
-    
-  } 
+  }
 }
 
 ReactDom.render(
