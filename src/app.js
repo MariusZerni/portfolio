@@ -241,7 +241,8 @@ class App extends React.Component {
               <figure className="effect-marley">
                 <div className="overlay">
                   <h4 id="h2"><a target="_blanck"> Just Imobiliare</a></h4>
-                  <p>A CRM project developed for an estate agency which allows the agents to authenticate, create accounts, manage property types and client information. </p>
+                  <p>Coming soon</p>
+                  {/* <p>A CRM project developed for an estate agency which allows the agents to authenticate, create accounts, manage property types and client information. </p> */}
                 </div>
               </figure>
             </div>
