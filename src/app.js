@@ -24,7 +24,8 @@ class App extends React.Component {
       modalSkillsIsOpen: false,
       modalEducationIsOpen: false,
       scrolled: false,
-      selectedMenu: 'home'
+      selectedMenu: 'home',
+      isMobile: false
     }
   }
 
@@ -48,11 +49,23 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.isMobile)
     return <div className="main-container">
       <div className="img-background" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div id="home" className="overlay">
+
+
           <div className={this.state.scrolled ? 'container-navbar scrolled' : 'container-navbar'}>
-            <ul>
+            <a className="toggle-button" href="#"
+              onClick={() => this.setState({ isMobile: !this.state.isMobile })}
+            >
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </a>
+
+
+            <ul className={this.state.isMobile === true ? 'active' : null}>
               <li>
                 <div className={this.state.selectedMenu === 'home' ? 'underline' : null}
                   onClick={() => this.setState({ selectedMenu: 'home' })} ><a href="#home">home</a>
@@ -281,7 +294,7 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-      <div className="contact-container"><span id="contact"></span>
+      <div className="contact-container">
         <div className="contact-border">
           <h3>contact</h3>
           <div className="border-line"></div>
