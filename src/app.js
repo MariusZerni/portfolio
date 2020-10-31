@@ -294,7 +294,7 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-      <div className="contact-container">
+      <div className="contact-container"><span id="contact"></span>
         <div className="contact-border">
           <h3>contact</h3>
           <div className="border-line"></div>
