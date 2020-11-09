@@ -52,16 +52,16 @@ class App extends React.Component {
     console.log(this.state.isMobile)
     return <div className="main-container">
       <div className="img-background" style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <div id="home" className="overlay">
+        <div className="overlay">
 
 
           <div className={this.state.scrolled ? 'container-navbar scrolled' : 'container-navbar'}>
             <a className="toggle-button" href="#"
               onClick={() => this.setState({ isMobile: !this.state.isMobile })}
             >
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
+              <span className={this.state.isMobile === true ? 'bar open' : 'bar'}></span>
+              <span className={this.state.isMobile === true ? 'bar open' : 'bar'}></span>
+              <span className={this.state.isMobile === true ? 'bar open' : 'bar'}></span>
             </a>
 
 
@@ -127,43 +127,43 @@ class App extends React.Component {
                   <ModalBody>
                     <section className="icons-section">
                       <div className="skill-icon">
-                        <i className="fab fa-react fa-5x"></i>
+                        <i className="fab fa-react "></i>
                         <h5>React</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-js fa-5x"></i>
+                        <i className="fab fa-js "></i>
                         <h5>JavaScript</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-html5 fa-5x"></i>
+                        <i className="fab fa-html5 "></i>
                         <h5>HTML</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-css3 fa-5x"></i>
+                        <i className="fab fa-css3 "></i>
                         <h5>CSS3</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-node fa-5x"></i>
+                        <i className="fab fa-node "></i>
                         <h5>Node.js</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-python fa-5x"></i>
+                        <i className="fab fa-python "></i>
                         <h5>Python</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-git fa-5x"></i>
+                        <i className="fab fa-git "></i>
                         <h5>Git</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-github fa-5x"></i>
+                        <i className="fab fa-github "></i>
                         <h5>Github</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-sass fa-5x"></i>
+                        <i className="fab fa-sass "></i>
                         <h5>SASS</h5>
                       </div>
                       <div className="skill-icon">
-                        <i className="fab fa-bootstrap fa-5x"></i>
+                        <i className="fab fa-bootstrap "></i>
                         <h5>Bootstrap</h5>
                       </div>
                     </section>
@@ -253,9 +253,8 @@ class App extends React.Component {
             <div className="project-card" style={{ backgroundImage: `url(${justImobiliare})` }}>
               <figure className="effect-marley">
                 <div className="overlay">
-                  <h4 id="h2"><a target="_blanck"> Just Imobiliare</a></h4>
-                  <p>Coming soon</p>
-                  {/* <p>A CRM project developed for an estate agency which allows the agents to authenticate, create accounts, manage property types and client information. </p> */}
+                  <h4 id="h2"><a href="http://nonnagon.net:9000/home" target="_blanck"> Just Imobiliare</a></h4>
+                  <p>A CRM project developed for an estate agency which allows the agents to authenticate, create accounts, manage property types and client information. </p>
                 </div>
               </figure>
             </div>
